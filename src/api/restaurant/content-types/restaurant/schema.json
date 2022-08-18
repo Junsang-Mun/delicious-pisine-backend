@@ -50,6 +50,9 @@
     },
     "Information": {
       "type": "richtext"
+    },
+    "Location": {
+      "type": "text"
     }
   }
 }
