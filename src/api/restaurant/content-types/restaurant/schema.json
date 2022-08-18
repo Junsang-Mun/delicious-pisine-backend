@@ -27,7 +27,6 @@
     },
     "Location": {
       "type": "string",
-      "regex": "[0-9]",
       "required": true
     },
     "Menu": {
