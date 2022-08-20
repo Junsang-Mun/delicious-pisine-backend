@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -29,6 +29,10 @@
       "type": "string",
       "required": true
     },
+    "Summery": {
+      "type": "string",
+      "required": true
+    },
     "Menu": {
       "type": "richtext",
       "required": true
@@ -37,13 +41,16 @@
       "type": "richtext"
     },
     "Kind": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Lat": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Lng": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }
