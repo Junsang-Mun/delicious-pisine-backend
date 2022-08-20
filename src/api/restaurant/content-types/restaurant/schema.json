@@ -38,6 +38,12 @@
     },
     "Kind": {
       "type": "string"
+    },
+    "Lat": {
+      "type": "string"
+    },
+    "Lng": {
+      "type": "string"
     }
   }
 }
