@@ -44,11 +44,11 @@
       "type": "string",
       "required": true
     },
-    "Lat": {
+    "Lng": {
       "type": "string",
       "required": true
     },
-    "Lng": {
+    "Lat": {
       "type": "string",
       "required": true
     }
