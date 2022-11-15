@@ -1,0 +1,22 @@
+{
+  "name": "42-delicious-backend",
+  "version": "0.0.1",
+  "description": "42 Delicious backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Junsang-Mun/delicious-pisine-backend.git"
+  },
+  "author": "",
+  "license": "Beerware",
+  "bugs": {
+    "url": "https://github.com/Junsang-Mun/delicious-pisine-backend/issues"
+  },
+  "homepage": "https://github.com/Junsang-Mun/delicious-pisine-backend#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
