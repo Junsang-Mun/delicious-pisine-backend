@@ -2,7 +2,7 @@
   "name": "42-delicious-backend",
   "version": "0.0.1",
   "description": "42 Delicious backend",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Junsang-Mun/delicious-pisine-backend#readme",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.27.0"
   }
 }
