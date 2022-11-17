@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/Junsang-Mun/delicious-pisine-backend#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^4.12.0"
   },
   "devDependencies": {
     "eslint": "^8.27.0"
