@@ -1,10 +1,11 @@
 import express from 'express';
+import { listData } from '../script/notion.js';
 
 const router = express.Router();
 export { router as apiRouter };
 
 router.get('/list', async function(req, res) {
-	const data = 'data'; //do something... query a data...
+	const data = await listData();
 	res.status(200);
 	res.send(data);
 });
