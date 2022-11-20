@@ -3,7 +3,7 @@ import cors from 'cors';
 import { apiRouter } from './routes/api.js';
 
 const app = express();
-const port = 5173;
+const port = 5961;
 
 app.use(cors());
 app.use('/api', apiRouter);
