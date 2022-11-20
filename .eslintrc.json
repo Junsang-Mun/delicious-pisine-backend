@@ -20,7 +20,7 @@
             "unix"
         ],
         "quotes": [
-            "error",
+            "warning",
             "single"
         ],
         "semi": [
