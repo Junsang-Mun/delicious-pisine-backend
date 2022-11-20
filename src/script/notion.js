@@ -11,7 +11,7 @@ function packJson(data) {
 	data.map((item) => {
 		result.list.push({
 			'name': item.properties.Restaurant.title[0]?.plain_text,
-			'price': item.properties.Price.rich_text[0]?.plain_text,
+			'price': item.properties.Price?.number,
 			'category': item.properties.Category.rich_text[0]?.plain_text,
 			'summary': item.properties.Summary.rich_text[0]?.plain_text,
 			'coordinate': {
@@ -51,7 +51,43 @@ export async function listData() {
 	}
 }
 
-export async function sortData() {
+export async function sortData(sortOption) {
+	let prop;
+	let dir;
+	switch(sortOption) {
+	case 'P_LTH': //price low to high
+		console.log('p_lth');
+		prop = 'Price';
+		dir = 'ascending';
+		break;
+	case 'P_HTL': //price high to low
+		console.log('p_htl');
+		prop = 'Price';
+		dir = 'descending';
+		break;
+	case 'A_ATZ': //restaurant name alphabetical order
+		console.log('a_atz');
+		prop = 'Name';
+		dir = 'ascending';
+		break;
+	case 'A_ZTA': //restaurant name reversed alphabetical order
+		console.log('a_zta');
+		prop = 'Name';
+		dir = 'descending';
+		break;
+	case 'C_ATZ': //category alphabetical order
+		console.log('c_atz');
+		prop = 'Category';
+		dir = 'ascending';
+		break;
+	case 'C_ZTA': //category reversed alphabetical order
+		console.log('c_zta');
+		prop = 'Category';
+		dir = 'descending';
+		break;
+	default:
+		break;
+	}
 	const options = {
 		method: 'POST',
 		headers: {
@@ -60,7 +96,13 @@ export async function sortData() {
 			'content-type': 'application/json',
 			authorization: `Bearer ${process.env.NOTION_TOKEN}`
 		},
-		body: JSON.stringify({page_size: 100})
+		body: JSON.stringify({
+			sorts: [{
+				'property': `${prop}`,
+				'direction': `${dir}`
+			}],
+			page_size: 100
+		})
 	};
 	const response = await fetch(`${url}/query`, options);
 	if (response.status !== 200) {
