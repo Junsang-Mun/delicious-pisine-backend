@@ -67,12 +67,12 @@ export async function sortData(sortOption) {
 		break;
 	case 'A_ATZ': //restaurant name alphabetical order
 		console.log('a_atz');
-		prop = 'Name';
+		prop = 'Restaurant';
 		dir = 'ascending';
 		break;
 	case 'A_ZTA': //restaurant name reversed alphabetical order
 		console.log('a_zta');
-		prop = 'Name';
+		prop = 'Restaurant';
 		dir = 'descending';
 		break;
 	case 'C_ATZ': //category alphabetical order
