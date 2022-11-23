@@ -15,6 +15,7 @@ function packJson(data) {
 			'category': item.properties.Category.rich_text[0]?.plain_text,
 			'summary': item.properties.Summary.rich_text[0]?.plain_text,
 			'coordinate': {
+				'loc': item.properties.Location.rich_text[0]?.plain_text,
 				'lat': item.properties.Lat?.number,
 				'lng': item.properties.Lng?.number
 			},
