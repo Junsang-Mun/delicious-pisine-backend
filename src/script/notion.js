@@ -11,7 +11,7 @@ function packJson(data) {
 	data.map((item) => {
 		result.list.push({
 			'name': item.properties.Restaurant.title[0]?.plain_text,
-			'price': item.properties.Price?.number,
+			'price': item.properties.Price.rich_text[0]?.plain_text,
 			'category': item.properties.Category.rich_text[0]?.plain_text,
 			'summary': item.properties.Summary.rich_text[0]?.plain_text,
 			'coordinate': {
@@ -19,7 +19,7 @@ function packJson(data) {
 				'lat': item.properties.Lat?.number,
 				'lng': item.properties.Lng?.number
 			},
-			'menu': item.properties.Menu.rich_text[0]?.plain_text,
+			'detail': item.properties.Detail.rich_text[0]?.plain_text,
 		});
 	});
 	return result;
