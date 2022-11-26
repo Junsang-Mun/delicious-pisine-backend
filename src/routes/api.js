@@ -14,7 +14,7 @@ router.post('/sort', async function(req, res) {
 	const sortOption = req.body.sort;
 	const data = await sortData(sortOption);
 	res.status(200);
-	res.send(data);
+	res.send(data); 
 });
 
 router.get('/query', async function (req, res) {
