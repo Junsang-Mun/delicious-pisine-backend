@@ -4,7 +4,7 @@ import cors from 'cors';
 import { apiRouter } from './routes/api.js';
 
 const app = express();
-const port = 5961;
+const port = 8080;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

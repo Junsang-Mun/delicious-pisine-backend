@@ -10,6 +10,7 @@ function packJson(data) {
 	};
 	data.map((item) => {
 		result.list.push({
+			'id': item.properties.id?.number,
 			'name': item.properties.Restaurant.title[0]?.plain_text,
 			'price': item.properties.Price.rich_text[0]?.plain_text,
 			'category': item.properties.Category.rich_text[0]?.plain_text,
@@ -20,6 +21,7 @@ function packJson(data) {
 				'lng': item.properties.Lng?.number
 			},
 			'detail': item.properties.Detail.rich_text[0]?.plain_text,
+			'credit': item.properties.Credit.rich_text[0]?.plain_text
 		});
 	});
 	return result;
