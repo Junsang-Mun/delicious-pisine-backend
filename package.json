@@ -5,6 +5,8 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
+    "pm2": "pm2 start src/index.js",
+    "kill": "pm2 kill",
     "node": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
